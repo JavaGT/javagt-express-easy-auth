@@ -9,7 +9,6 @@ export class AuthMiddleware {
         this.#authManager = authManager;
 
         this.useApiKey              = this.useApiKey.bind(this);
-        this.requireApiKey          = this.requireApiKey.bind(this);
         this.requireAuth            = this.requireAuth.bind(this);
         this.requireAuthOrApiKey    = this.requireAuthOrApiKey.bind(this);
         this.requireFreshAuth       = this.requireFreshAuth.bind(this);
@@ -73,10 +72,6 @@ export class AuthMiddleware {
         } catch (err) {
             next(err);
         }
-    }
-
-    requireApiKey(req, res, next) {
-        return this.useApiKey(req, res, next);
     }
 
     async requireAuth(req, res, next) {

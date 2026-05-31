@@ -14,7 +14,7 @@ The Express Easy Auth uses a decoupled, service-oriented architecture designed f
 ### 🔑 Middleware Patterns
 Standardize on the explicit trilogy of guards in `AuthMiddleware`:
 - `requireAuth` for human session flows.
-- `requireApiKey` for programmatic/worker flows.
+- `useApiKey` for programmatic/worker flows.
 - `requireAuthOrApiKey` for hybrid endpoints.
 - `requireFreshAuth` for sensitive operations requiring recent re-verification.
 

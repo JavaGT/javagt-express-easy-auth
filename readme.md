@@ -123,7 +123,7 @@ app.get('/me', auth.requireAuth, (req, res) => {
 ### Require an API key
 
 ```js
-app.get('/data', auth.requireApiKey, (req, res) => {
+app.get('/data', auth.useApiKey, (req, res) => {
     // req.user   = { id, email, display_name }
     // req.apiKey = { id, name, prefix, grants }
     res.json({ key: req.apiKey.name });

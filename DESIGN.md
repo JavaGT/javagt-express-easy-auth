@@ -342,7 +342,7 @@ deleteUser(userId: number): Promise<DeleteUserResult>
 
 ```js
 auth.requireAuth              // session only; sets req.user, req.authType = 'session'
-auth.requireApiKey            // api key only; sets req.user, req.apiKey, req.authType = 'api_key'
+auth.useApiKey            // api key only; sets req.user, req.apiKey, req.authType = 'api_key'
 auth.requireAuthOrApiKey      // either; sets above fields appropriately
 auth.requireFreshAuth         // session, re-authed within 5 min
 auth.requireFreshAuth(['personal:auth.write'])  // + personal scope check
